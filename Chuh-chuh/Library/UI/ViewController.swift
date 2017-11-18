@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = theme.backgroundColor
+        initialize()
     }
+    
+    func initialize() {}
     
 }

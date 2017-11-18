@@ -18,13 +18,16 @@
 		E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2271FC04967003A495D /* MainTheme.swift */; };
 		E79BD22B1FC04967003A495D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2281FC04967003A495D /* Theme.swift */; };
 		E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2291FC04967003A495D /* ThemeManager.swift */; };
+		E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2481FC0AC33003A495D /* LocationService.swift */; };
+		E79BD24B1FC0B399003A495D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD24A1FC0B399003A495D /* Button.swift */; };
+		E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		053D67409780D66943859A3F /* Pods-Chuh-chuh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuh-chuh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh.debug.xcconfig"; sourceTree = "<group>"; };
 		3CCFCD0FA49D42DE8969703D /* Pods-Chuh-chuh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuh-chuh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh.release.xcconfig"; sourceTree = "<group>"; };
 		882C41A38696B08CDBD2F829 /* Pods_Chuh_chuh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuh_chuh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E79BD2021FC04565003A495D /* Chuh-chuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuh-chuh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E79BD2021FC04565003A495D /* Flace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79BD2051FC04565003A495D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79BD20C1FC04565003A495D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79BD20F1FC04565003A495D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		E79BD2271FC04967003A495D /* MainTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
 		E79BD2281FC04967003A495D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		E79BD2291FC04967003A495D /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		E79BD2481FC0AC33003A495D /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E79BD24A1FC0B399003A495D /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,7 @@
 		E79BD2031FC04565003A495D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E79BD2021FC04565003A495D /* Chuh-chuh.app */,
+				E79BD2021FC04565003A495D /* Flace.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +141,7 @@
 		E79BD21F1FC0480C003A495D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD24A1FC0B399003A495D /* Button.swift */,
 				E79BD2231FC04854003A495D /* ViewController.swift */,
 				E79BD2201FC0480F003A495D /* Extension */,
 			);
@@ -144,6 +151,7 @@
 		E79BD2201FC0480F003A495D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */,
 				E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
@@ -152,6 +160,7 @@
 		E79BD2251FC04903003A495D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD2481FC0AC33003A495D /* LocationService.swift */,
 				E79BD2261FC04967003A495D /* ThemeManager */,
 			);
 			path = Services;
@@ -195,7 +204,7 @@
 			);
 			name = "Chuh-chuh";
 			productName = "Chuh-chuh";
-			productReference = E79BD2021FC04565003A495D /* Chuh-chuh.app */;
+			productReference = E79BD2021FC04565003A495D /* Flace.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,16 +294,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,11 +314,14 @@
 			files = (
 				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
+				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
 				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
+				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
+				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,7 +458,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -469,7 +475,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

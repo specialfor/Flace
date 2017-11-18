@@ -18,6 +18,8 @@ class SplashRouter {
     }()
     
     var rootViewController: UIViewController {
+        configureNavBar()
+        
         showInitial()
         return navigationController
     }
@@ -51,21 +53,21 @@ class SplashRouter {
         navigationController.dismiss(animated: animated, completion: nil)
     }
     
-//    private func configureNavBar() {
+    private func configureNavBar() {
 //        UIApplication.shared.statusBarStyle = .lightContent
-//
-//        let navigationBar = navigationController.navigationBar
-//
-//        let theme = ThemeManager.shared.theme
-//
-//        navigationBar.barTintColor = theme.mainColor
-//        navigationBar.isTranslucent = false
-//        navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        navigationBar.shadowImage = UIImage()
-//
-//        navigationBar.tintColor = theme.selectedTextColor
-//        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: theme.selectedTextColor]
-//
-//        navigationController.isNavigationBarHidden = false
-//    }
+
+        let navigationBar = navigationController.navigationBar
+
+        let theme = ThemeManager.shared.theme
+
+        navigationBar.barTintColor = theme.mainColor
+        navigationBar.isTranslucent = false
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+
+        navigationBar.tintColor = theme.selectedTextColor
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: theme.selectedTextColor]
+
+        navigationController.isNavigationBarHidden = false
+    }
 }
