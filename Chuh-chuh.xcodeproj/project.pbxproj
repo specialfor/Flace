@@ -21,6 +21,10 @@
 		E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2481FC0AC33003A495D /* LocationService.swift */; };
 		E79BD24B1FC0B399003A495D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD24A1FC0B399003A495D /* Button.swift */; };
 		E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */; };
+		E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD24F1FC0B4F2003A495D /* CreatePlaceViewController.swift */; };
+		E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2511FC0B9ED003A495D /* ImageSelector.swift */; };
+		E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2531FC0BAD2003A495D /* PermissionManager.swift */; };
+		E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2551FC0BB51003A495D /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		E79BD2481FC0AC33003A495D /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		E79BD24A1FC0B399003A495D /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		E79BD24F1FC0B4F2003A495D /* CreatePlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaceViewController.swift; sourceTree = "<group>"; };
+		E79BD2511FC0B9ED003A495D /* ImageSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
+		E79BD2531FC0BAD2003A495D /* PermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		E79BD2551FC0BB51003A495D /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 		E79BD2171FC045B6003A495D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD24E1FC0B4DC003A495D /* CreatePlace */,
 				E79BD21B1FC0476C003A495D /* Main */,
 				E79BD2181FC045DB003A495D /* Splash */,
 			);
@@ -160,6 +169,9 @@
 		E79BD2251FC04903003A495D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD2551FC0BB51003A495D /* AlertManager.swift */,
+				E79BD2531FC0BAD2003A495D /* PermissionManager.swift */,
+				E79BD2511FC0B9ED003A495D /* ImageSelector.swift */,
 				E79BD2481FC0AC33003A495D /* LocationService.swift */,
 				E79BD2261FC04967003A495D /* ThemeManager */,
 			);
@@ -182,6 +194,14 @@
 				E79BD2281FC04967003A495D /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		E79BD24E1FC0B4DC003A495D /* CreatePlace */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD24F1FC0B4F2003A495D /* CreatePlaceViewController.swift */,
+			);
+			path = CreatePlace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,14 +334,18 @@
 			files = (
 				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
+				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
+				E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */,
 				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
+				E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */,
 				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
+				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +481,7 @@
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
+				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Flace;
 				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -474,7 +498,7 @@
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
+				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Flace;
 				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -34,8 +34,12 @@ class SplashRouter {
         showModule(MainViewController())
     }
     
+    func showCreatePlace() {
+        showModule(CreatePlaceViewController())
+    }
+    
     // MAKR: Show, present, dismiss
-    private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = true) {
+    private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = false) {
         navigationController.pushViewController(viewController, animated: animated)
         
         if popPrev {
@@ -54,7 +58,7 @@ class SplashRouter {
     }
     
     private func configureNavBar() {
-//        UIApplication.shared.statusBarStyle = .lightContent
+        UIApplication.shared.statusBarStyle = .lightContent
 
         let navigationBar = navigationController.navigationBar
 

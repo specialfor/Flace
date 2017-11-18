@@ -46,6 +46,8 @@ class MainViewController: ViewController, LocationServiceDelegate {
     
     // MARK: View lifecycle
     override func initialize() {
+        navigationItem.title = "Places Nearby"
+        
         mapView.showsUserLocation = true
         
         addButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
@@ -63,7 +65,7 @@ class MainViewController: ViewController, LocationServiceDelegate {
     
     // MARK: Actions
     @objc func addTapped() {
-        // Show add screen.
+        SplashRouter.shared.showCreatePlace()
     }
     
     // MARK: LocationServiceDelegate
