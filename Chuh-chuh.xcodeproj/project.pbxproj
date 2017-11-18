@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2051FC04565003A495D /* AppDelegate.swift */; };
-		E79BD2081FC04565003A495D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2071FC04565003A495D /* ViewController.swift */; };
-		E79BD20B1FC04565003A495D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79BD2091FC04565003A495D /* Main.storyboard */; };
 		E79BD20D1FC04565003A495D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79BD20C1FC04565003A495D /* Assets.xcassets */; };
 		E79BD2101FC04565003A495D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79BD20E1FC04565003A495D /* LaunchScreen.storyboard */; };
+		E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2191FC045FE003A495D /* SplashRouter.swift */; };
+		E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD21C1FC04779003A495D /* MainViewController.swift */; };
+		E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */; };
+		E79BD2241FC04854003A495D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2231FC04854003A495D /* ViewController.swift */; };
+		E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2271FC04967003A495D /* MainTheme.swift */; };
+		E79BD22B1FC04967003A495D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2281FC04967003A495D /* Theme.swift */; };
+		E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2291FC04967003A495D /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E79BD2021FC04565003A495D /* Chuh-chuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuh-chuh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79BD2051FC04565003A495D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E79BD2071FC04565003A495D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E79BD20A1FC04565003A495D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E79BD20C1FC04565003A495D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79BD20F1FC04565003A495D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E79BD2111FC04565003A495D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79BD2191FC045FE003A495D /* SplashRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		E79BD21C1FC04779003A495D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E79BD2231FC04854003A495D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E79BD2271FC04967003A495D /* MainTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTheme.swift; sourceTree = "<group>"; };
+		E79BD2281FC04967003A495D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E79BD2291FC04967003A495D /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,91 @@
 		E79BD2041FC04565003A495D /* Chuh-chuh */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD2251FC04903003A495D /* Services */,
+				E79BD21E1FC04804003A495D /* Library */,
+				E79BD2171FC045B6003A495D /* Modules */,
 				E79BD2051FC04565003A495D /* AppDelegate.swift */,
-				E79BD2071FC04565003A495D /* ViewController.swift */,
-				E79BD2091FC04565003A495D /* Main.storyboard */,
 				E79BD20C1FC04565003A495D /* Assets.xcassets */,
 				E79BD20E1FC04565003A495D /* LaunchScreen.storyboard */,
 				E79BD2111FC04565003A495D /* Info.plist */,
 			);
 			path = "Chuh-chuh";
+			sourceTree = "<group>";
+		};
+		E79BD2171FC045B6003A495D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD21B1FC0476C003A495D /* Main */,
+				E79BD2181FC045DB003A495D /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E79BD2181FC045DB003A495D /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2191FC045FE003A495D /* SplashRouter.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		E79BD21B1FC0476C003A495D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD21C1FC04779003A495D /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E79BD21E1FC04804003A495D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD21F1FC0480C003A495D /* UI */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E79BD21F1FC0480C003A495D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2231FC04854003A495D /* ViewController.swift */,
+				E79BD2201FC0480F003A495D /* Extension */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E79BD2201FC0480F003A495D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E79BD2251FC04903003A495D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2261FC04967003A495D /* ThemeManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E79BD2261FC04967003A495D /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD22D1FC049C6003A495D /* Theme */,
+				E79BD2291FC04967003A495D /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		E79BD22D1FC049C6003A495D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2271FC04967003A495D /* MainTheme.swift */,
+				E79BD2281FC04967003A495D /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +212,6 @@
 			files = (
 				E79BD2101FC04565003A495D /* LaunchScreen.storyboard in Resources */,
 				E79BD20D1FC04565003A495D /* Assets.xcassets in Resources */,
-				E79BD20B1FC04565003A495D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +222,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79BD2081FC04565003A495D /* ViewController.swift in Sources */,
+				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
+				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
+				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
+				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
+				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
+				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
+				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E79BD2091FC04565003A495D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E79BD20A1FC04565003A495D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E79BD20E1FC04565003A495D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,12 +359,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = URNH28Q66F;
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -289,12 +375,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = URNH28Q66F;
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
