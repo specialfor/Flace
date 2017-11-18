@@ -7,6 +7,5 @@ target 'Chuh-chuh' do
 
   # Pods for Chuh-chuh
   pod 'SnapKit', '~> 4.0.0'
-  pod 'Moya'
 
 end
