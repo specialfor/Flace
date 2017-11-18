@@ -31,7 +31,7 @@ class SplashRouter {
     
     // MARK: Routes
     func showInitial() {
-        showModule(MainViewController())
+        showModule(MainViewController(), animated: true, popPrev: true)
     }
     
     func showCreatePlace() {

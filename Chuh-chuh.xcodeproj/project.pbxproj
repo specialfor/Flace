@@ -32,6 +32,8 @@
 		E79BD2631FC0CD7B003A495D /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2621FC0CD7B003A495D /* SelectLocationViewController.swift */; };
 		E79BD2651FC0DC29003A495D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2641FC0DC29003A495D /* Constants.swift */; };
 		E79BD2671FC0DC55003A495D /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */; };
+		E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2681FC0E03F003A495D /* PhotoSaver.swift */; };
+		E79BD2731FC0E3B1003A495D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2721FC0E3B0003A495D /* StorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		E79BD2621FC0CD7B003A495D /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		E79BD2641FC0DC29003A495D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
+		E79BD2681FC0E03F003A495D /* PhotoSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaver.swift; sourceTree = "<group>"; };
+		E79BD2721FC0E3B0003A495D /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,11 +193,13 @@
 			isa = PBXGroup;
 			children = (
 				E79BD2591FC0CBAA003A495D /* DB */,
+				E79BD2721FC0E3B0003A495D /* StorageService.swift */,
 				E79BD2551FC0BB51003A495D /* AlertManager.swift */,
 				E79BD2531FC0BAD2003A495D /* PermissionManager.swift */,
 				E79BD2511FC0B9ED003A495D /* ImageSelector.swift */,
 				E79BD2481FC0AC33003A495D /* LocationService.swift */,
 				E79BD2261FC04967003A495D /* ThemeManager */,
+				E79BD2681FC0E03F003A495D /* PhotoSaver.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
+				E79BD2731FC0E3B1003A495D /* StorageService.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
 				E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */,
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
@@ -404,6 +411,7 @@
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
 				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
 				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
+				E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

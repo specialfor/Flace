@@ -26,6 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        StorageService.default.save()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        StorageService.default.save()
+    }
 
 }
 

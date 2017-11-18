@@ -183,7 +183,12 @@ class CreatePlaceViewController: ViewController {
     
     @objc private func createTapped() {
         if validate() {
-            // TODO: Create place
+            if let place = preparePlace() {
+                StorageService.default.places.append(place)
+                SplashRouter.shared.showInitial()
+            } else {
+                AlertManager.sharedInstance.showAlertOk(message: "Something went wrond. Please, try again.")
+            }
         } else {
             AlertManager.sharedInstance.showAlertOk(message: "Plase, select image, location or enter title.")
         }
@@ -197,6 +202,14 @@ class CreatePlaceViewController: ViewController {
         }
         
         return false
+    }
+    
+    private func preparePlace() -> Place? {
+        if let imageUrl = PhotoSaver().saveImage(imageView.image!) {
+            return Place(id: imageUrl, title: titleField.text!, image: imageUrl, location: location!, rating: 0)
+        }
+        
+        return nil
     }
 }
 
