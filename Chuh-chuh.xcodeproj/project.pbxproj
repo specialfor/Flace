@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B35634E5CBC6753AAC9522E /* Pods_Chuh_chuh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882C41A38696B08CDBD2F829 /* Pods_Chuh_chuh.framework */; };
 		E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2051FC04565003A495D /* AppDelegate.swift */; };
 		E79BD20D1FC04565003A495D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79BD20C1FC04565003A495D /* Assets.xcassets */; };
 		E79BD2101FC04565003A495D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79BD20E1FC04565003A495D /* LaunchScreen.storyboard */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053D67409780D66943859A3F /* Pods-Chuh-chuh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuh-chuh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh.debug.xcconfig"; sourceTree = "<group>"; };
+		3CCFCD0FA49D42DE8969703D /* Pods-Chuh-chuh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuh-chuh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh.release.xcconfig"; sourceTree = "<group>"; };
+		882C41A38696B08CDBD2F829 /* Pods_Chuh_chuh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuh_chuh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79BD2021FC04565003A495D /* Chuh-chuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuh-chuh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79BD2051FC04565003A495D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79BD20C1FC04565003A495D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B35634E5CBC6753AAC9522E /* Pods_Chuh_chuh.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18F8BED072C8A25D9F458619 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				882C41A38696B08CDBD2F829 /* Pods_Chuh_chuh.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A10D7A0B965B844C68174C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				053D67409780D66943859A3F /* Pods-Chuh-chuh.debug.xcconfig */,
+				3CCFCD0FA49D42DE8969703D /* Pods-Chuh-chuh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E79BD1F91FC04565003A495D = {
 			isa = PBXGroup;
 			children = (
 				E79BD2041FC04565003A495D /* Chuh-chuh */,
 				E79BD2031FC04565003A495D /* Products */,
+				2A10D7A0B965B844C68174C1 /* Pods */,
+				18F8BED072C8A25D9F458619 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E79BD2141FC04565003A495D /* Build configuration list for PBXNativeTarget "Chuh-chuh" */;
 			buildPhases = (
+				B66D1CB497FEE3E8E94E1CFD /* [CP] Check Pods Manifest.lock */,
 				E79BD1FE1FC04565003A495D /* Sources */,
 				E79BD1FF1FC04565003A495D /* Frameworks */,
 				E79BD2001FC04565003A495D /* Resources */,
+				C7C34367558D685E82F79AC2 /* [CP] Embed Pods Frameworks */,
+				49E6F3E1FFC7BF2AF5E83742 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -216,6 +243,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49E6F3E1FFC7BF2AF5E83742 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B66D1CB497FEE3E8E94E1CFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chuh-chuh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C34367558D685E82F79AC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E79BD1FE1FC04565003A495D /* Sources */ = {
@@ -356,6 +443,7 @@
 		};
 		E79BD2151FC04565003A495D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053D67409780D66943859A3F /* Pods-Chuh-chuh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -372,6 +460,7 @@
 		};
 		E79BD2161FC04565003A495D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CCFCD0FA49D42DE8969703D /* Pods-Chuh-chuh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
