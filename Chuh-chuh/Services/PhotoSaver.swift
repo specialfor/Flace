@@ -11,23 +11,23 @@ import UIKit
 class PhotoSaver {
     
     func saveImage(_ image: UIImage) -> String? {
-        let defaultManager = FileManager.default
+        let documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
         
-        guard let directoryUrl = try? defaultManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true) else {
-            return nil
-        }
+        let imgPath = URL(fileURLWithPath: documentDirectoryPath.appendingPathComponent("\(Date().timeIntervalSince1970).jpg"))
         
-        let fileUrl = directoryUrl.appendingPathComponent("\(Date().timeIntervalSince1970).jpg")
-
-        if !defaultManager.fileExists(atPath: fileUrl.path) {
-            if let _ = UIImageJPEGRepresentation(image, 1.0) {
-                return fileUrl.path
-            } else {
+        if !FileManager.default.fileExists(atPath: imgPath.path) {
+            do {
+                try UIImageJPEGRepresentation(image, 1.0)?.write(to: imgPath, options: .atomic)
+                
+                return imgPath.absoluteString
+            } catch let error {
+                print(error.localizedDescription)
                 return nil
             }
         } else {
-            return fileUrl.path
+            return imgPath.absoluteString
         }
+        
     }
     
 }
