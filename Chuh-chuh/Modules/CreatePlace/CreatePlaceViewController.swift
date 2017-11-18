@@ -8,10 +8,17 @@
 
 import UIKit
 import SnapKit
+import CoreLocation.CLLocation
 
 class CreatePlaceViewController: ViewController {
     
     var imageSelector: ImageSelector?
+    
+    var location: Location? {
+        didSet {
+            locationButton.setTitle(location!.title, for: .normal)
+        }
+    }
     
     // MARK: Views
     lazy var scrollView: UIScrollView = {
@@ -171,11 +178,25 @@ class CreatePlaceViewController: ViewController {
     @objc private func locationTapped() {
         self.view.endEditing(false)
         
-        // TODO: show location screen
+        SplashRouter.shared.showSelectLocation(location)
     }
     
     @objc private func createTapped() {
-        // TODO: show main screen
+        if validate() {
+            // TODO: Create place
+        } else {
+            AlertManager.sharedInstance.showAlertOk(message: "Plase, select image, location or enter title.")
+        }
+    }
+    
+    // MARK: Private
+    private func validate() -> Bool {
+        let text = titleField.text ?? ""
+        if let _ = imageView.image, let _ = location, !text.isEmpty {
+            return true
+        }
+        
+        return false
     }
 }
 

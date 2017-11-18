@@ -26,6 +26,12 @@
 		E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2531FC0BAD2003A495D /* PermissionManager.swift */; };
 		E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2551FC0BB51003A495D /* AlertManager.swift */; };
 		E79BD2581FC0CAFC003A495D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E79BD2571FC0CAFC003A495D /* GoogleService-Info.plist */; };
+		E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25A1FC0CBB6003A495D /* FirebaseService.swift */; };
+		E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25D1FC0CCA5003A495D /* Location.swift */; };
+		E79BD2601FC0CCC7003A495D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25F1FC0CCC7003A495D /* Place.swift */; };
+		E79BD2631FC0CD7B003A495D /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2621FC0CD7B003A495D /* SelectLocationViewController.swift */; };
+		E79BD2651FC0DC29003A495D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2641FC0DC29003A495D /* Constants.swift */; };
+		E79BD2671FC0DC55003A495D /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		E79BD2531FC0BAD2003A495D /* PermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		E79BD2551FC0BB51003A495D /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		E79BD2571FC0CAFC003A495D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E79BD25A1FC0CBB6003A495D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		E79BD25D1FC0CCA5003A495D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E79BD25F1FC0CCC7003A495D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E79BD2621FC0CD7B003A495D /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		E79BD2641FC0DC29003A495D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,7 @@
 		E79BD2171FC045B6003A495D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD2611FC0CD5D003A495D /* SelectLocation */,
 				E79BD24E1FC0B4DC003A495D /* CreatePlace */,
 				E79BD21B1FC0476C003A495D /* Main */,
 				E79BD2181FC045DB003A495D /* Splash */,
@@ -145,7 +158,9 @@
 		E79BD21E1FC04804003A495D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD25C1FC0CC98003A495D /* Models */,
 				E79BD21F1FC0480C003A495D /* UI */,
+				E79BD2641FC0DC29003A495D /* Constants.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -165,6 +180,7 @@
 			children = (
 				E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */,
 				E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */,
+				E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -172,6 +188,7 @@
 		E79BD2251FC04903003A495D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD2591FC0CBAA003A495D /* DB */,
 				E79BD2551FC0BB51003A495D /* AlertManager.swift */,
 				E79BD2531FC0BAD2003A495D /* PermissionManager.swift */,
 				E79BD2511FC0B9ED003A495D /* ImageSelector.swift */,
@@ -205,6 +222,31 @@
 				E79BD24F1FC0B4F2003A495D /* CreatePlaceViewController.swift */,
 			);
 			path = CreatePlace;
+			sourceTree = "<group>";
+		};
+		E79BD2591FC0CBAA003A495D /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD25A1FC0CBB6003A495D /* FirebaseService.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		E79BD25C1FC0CC98003A495D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD25D1FC0CCA5003A495D /* Location.swift */,
+				E79BD25F1FC0CCC7003A495D /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E79BD2611FC0CD5D003A495D /* SelectLocation */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD2621FC0CD7B003A495D /* SelectLocationViewController.swift */,
+			);
+			path = SelectLocation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,17 +386,23 @@
 			files = (
 				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
+				E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */,
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
+				E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
+				E79BD2631FC0CD7B003A495D /* SelectLocationViewController.swift in Sources */,
 				E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */,
+				E79BD2671FC0DC55003A495D /* MKMapViewExtension.swift in Sources */,
 				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
 				E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */,
 				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
+				E79BD2651FC0DC29003A495D /* Constants.swift in Sources */,
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
+				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
 				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);

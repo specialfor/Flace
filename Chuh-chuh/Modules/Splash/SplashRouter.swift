@@ -38,6 +38,21 @@ class SplashRouter {
         showModule(CreatePlaceViewController())
     }
     
+    func showCreatePlace(with location: Location) {
+        guard let vc = (navigationController.viewControllers.filter { $0 is CreatePlaceViewController }).first as? CreatePlaceViewController else {
+            return
+        }
+        
+        vc.location = location
+        navigationController.popViewController(animated: true)
+    }
+    
+    func showSelectLocation(_ location: Location? = nil) {
+        let vc = SelectLocationViewController()
+        vc.location = location
+        showModule(vc)
+    }
+    
     // MAKR: Show, present, dismiss
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = false) {
         navigationController.pushViewController(viewController, animated: animated)

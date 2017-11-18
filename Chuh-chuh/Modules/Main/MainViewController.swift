@@ -70,7 +70,8 @@ class MainViewController: ViewController, LocationServiceDelegate {
     
     // MARK: LocationServiceDelegate
     func locationUpdated(location: CLLocation) {
-        // TODO:
+        mapView.adjustRegion(with: location.coordinate)
+        // TODO: calculate radius
     }
     
 }
