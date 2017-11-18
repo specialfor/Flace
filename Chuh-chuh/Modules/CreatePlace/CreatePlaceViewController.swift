@@ -53,7 +53,8 @@ class CreatePlaceViewController: ViewController {
         let width = UIScreen.main.bounds.width
         
         imgView.backgroundColor = .red
-        imgView.clipsToBounds = false
+        imgView.clipsToBounds = true
+        imgView.contentMode = .scaleAspectFill
         
         contentView.addSubview(imgView)
         imgView.snp.makeConstraints({ (make) in
