@@ -15,5 +15,6 @@ struct Place: Codable {
     let image: String
     let location: Location
     let rating: Double
+    let isRated: Bool = false
     
 }

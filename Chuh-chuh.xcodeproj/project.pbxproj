@@ -34,6 +34,9 @@
 		E79BD2671FC0DC55003A495D /* MKMapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */; };
 		E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2681FC0E03F003A495D /* PhotoSaver.swift */; };
 		E79BD2731FC0E3B1003A495D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2721FC0E3B0003A495D /* StorageService.swift */; };
+		E79BD2751FC0E76D003A495D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2741FC0E76D003A495D /* UIImageExtension.swift */; };
+		E79BD2771FC0E82F003A495D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2761FC0E82F003A495D /* MapDelegate.swift */; };
+		E79BD2791FC0EA48003A495D /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2781FC0EA48003A495D /* PlaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtension.swift; sourceTree = "<group>"; };
 		E79BD2681FC0E03F003A495D /* PhotoSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaver.swift; sourceTree = "<group>"; };
 		E79BD2721FC0E3B0003A495D /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		E79BD2741FC0E76D003A495D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		E79BD2761FC0E82F003A495D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
+		E79BD2781FC0EA48003A495D /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				E79BD21C1FC04779003A495D /* MainViewController.swift */,
+				E79BD2761FC0E82F003A495D /* MapDelegate.swift */,
+				E79BD2781FC0EA48003A495D /* PlaceAnnotation.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 				E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */,
 				E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */,
 				E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */,
+				E79BD2741FC0E76D003A495D /* UIImageExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				E79BD2731FC0E3B1003A495D /* StorageService.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
 				E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */,
+				E79BD2791FC0EA48003A495D /* PlaceAnnotation.swift in Sources */,
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
 				E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */,
@@ -408,11 +418,13 @@
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
 				E79BD2651FC0DC29003A495D /* Constants.swift in Sources */,
+				E79BD2771FC0E82F003A495D /* MapDelegate.swift in Sources */,
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
 				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
 				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
 				E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
+				E79BD2751FC0E76D003A495D /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

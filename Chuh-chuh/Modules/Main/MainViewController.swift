@@ -48,7 +48,7 @@ class MainViewController: ViewController, LocationServiceDelegate {
     override func initialize() {
         navigationItem.title = "Places Nearby"
         
-        mapView.showsUserLocation = true
+        configureMapView()
         
         addButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
     }
@@ -63,15 +63,32 @@ class MainViewController: ViewController, LocationServiceDelegate {
         LocationService.sharedInstance.delegate = nil
     }
     
+    // MARK: Configure
+    var mapDelegate: MapDelegate!
+    
+    private func configureMapView() {
+        mapView.showsUserLocation = true
+
+        mapDelegate = MapDelegate()
+        mapDelegate.mapView = mapView
+        mapDelegate.places = StorageService.default.places
+        
+        mapView.delegate = mapDelegate
+    }
+    
     // MARK: Actions
     @objc func addTapped() {
         SplashRouter.shared.showCreatePlace()
     }
     
     // MARK: LocationServiceDelegate
+    var isAdjusted = false
+    
     func locationUpdated(location: CLLocation) {
-        mapView.adjustRegion(with: location.coordinate)
-        // TODO: calculate radius
+        if !isAdjusted {
+            isAdjusted = true
+            mapView.adjustRegion(with: location.coordinate)
+        }
     }
     
 }

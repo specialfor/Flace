@@ -207,7 +207,9 @@ class CreatePlaceViewController: ViewController {
     
     private func preparePlace() -> Place? {
         if let imageUrl = PhotoSaver().saveImage(imageView.image!) {
-            return Place(id: imageUrl, title: titleField.text!, image: imageUrl, location: location!, rating: 0)
+            let rating = arc4random_uniform(10)
+            
+            return Place(id: imageUrl, title: titleField.text!, image: imageUrl, location: location!, rating: Double(rating))
         }
         
         return nil
