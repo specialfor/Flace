@@ -23,6 +23,9 @@
 		E79BD2341FC04FE6003A495D /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2331FC04FE6003A495D /* StationModel.swift */; };
 		E79BD2371FC05399003A495D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2361FC05399003A495D /* StringExtension.swift */; };
 		E79BD2391FC0615F003A495D /* TrainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2381FC0615F003A495D /* TrainProvider.swift */; };
+		E79BD23C1FC06996003A495D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD23B1FC06996003A495D /* City.swift */; };
+		E79BD23E1FC069FA003A495D /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD23D1FC069FA003A495D /* Path.swift */; };
+		E79BD2401FC06A26003A495D /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD23F1FC06A26003A495D /* Train.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		E79BD2331FC04FE6003A495D /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		E79BD2361FC05399003A495D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E79BD2381FC0615F003A495D /* TrainProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainProvider.swift; sourceTree = "<group>"; };
+		E79BD23B1FC06996003A495D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		E79BD23D1FC069FA003A495D /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		E79BD23F1FC06A26003A495D /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		E79BD21E1FC04804003A495D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E79BD23A1FC06982003A495D /* Models */,
 				E79BD2351FC05388003A495D /* Extensions */,
 				E79BD21F1FC0480C003A495D /* UI */,
 			);
@@ -204,6 +211,16 @@
 				E79BD2361FC05399003A495D /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E79BD23A1FC06982003A495D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E79BD23B1FC06996003A495D /* City.swift */,
+				E79BD23D1FC069FA003A495D /* Path.swift */,
+				E79BD23F1FC06A26003A495D /* Train.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,14 +361,17 @@
 				E79BD2341FC04FE6003A495D /* StationModel.swift in Sources */,
 				E79BD2241FC04854003A495D /* ViewController.swift in Sources */,
 				E79BD2221FC04848003A495D /* UIViewControllerExtension.swift in Sources */,
+				E79BD2401FC06A26003A495D /* Train.swift in Sources */,
 				E79BD2391FC0615F003A495D /* TrainProvider.swift in Sources */,
 				E79BD2321FC04FC5003A495D /* SearchModel.swift in Sources */,
+				E79BD23C1FC06996003A495D /* City.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
 				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
 				E79BD2371FC05399003A495D /* StringExtension.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
+				E79BD23E1FC069FA003A495D /* Path.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
