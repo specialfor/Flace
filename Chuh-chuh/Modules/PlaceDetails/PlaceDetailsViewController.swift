@@ -70,25 +70,27 @@ class PlaceDetailsViewController: ViewController {
         placeView.locationButton.setTitle(place.location.title, for: .normal)
         
         raterView.isHidden = false
-        raterView.isUserInteractionEnabled = !place.isRated
-        raterView.text = place.isRated ? "Common Rating" : ""
-        raterView.rating = place.normRating
+        adjustRatingView(isRated: place.isRated)
         
         if !place.isRated {
             rateButton.addTarget(self, action: #selector(rateTapped), for: .touchUpInside)
         }
     }
     
+    private func adjustRatingView(isRated: Bool) {
+        raterView.isUserInteractionEnabled = !isRated
+        raterView.text = isRated ? "Common Rating" : ""
+        raterView.rating = place.normRating
+    }
+    
     // MARK: Actions
     @objc private func rateTapped() {
-        raterView.isUserInteractionEnabled = false
-        raterView.text = "Common Rating"
         rateButton.removeFromSuperview()
         
         place.rating += raterView.rating
         place.isRated = true
         
-        raterView.rating = place.normRating
+        adjustRatingView(isRated: place.isRated)
         
         let storageService = StorageService.default
 
