@@ -50,7 +50,7 @@ class RatingListCell: UITableViewCell, ConfigurableCell {
         return view
     }()
     
-    lazy var positionLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel()
         
         label.textColor = theme.textColor
@@ -63,14 +63,14 @@ class RatingListCell: UITableViewCell, ConfigurableCell {
         return label
     }()
     
-    lazy var titleLabel: UILabel = {
+    lazy var distanceLabel: UILabel = {
         let label = UILabel()
         
         label.textColor = theme.textColor
         
         self.labelsView.addSubview(label)
         label.snp.makeConstraints({ (make) in
-            make.top.equalTo(positionLabel.snp.bottom)
+            make.top.equalTo(titleLabel.snp.bottom)
             make.bottom.left.right.equalToSuperview()
         })
         
@@ -108,6 +108,17 @@ class RatingListCell: UITableViewCell, ConfigurableCell {
         return view
     }()
     
+    // MARK: NumberFormatter
+    lazy var numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        
+        return formatter
+    }()
+    
     // MARK: Setup
     func setup(with model: CellModel) {
         guard let ratingModel = model as? RatingListCellModel else {
@@ -119,7 +130,12 @@ class RatingListCell: UITableViewCell, ConfigurableCell {
         
         photoImageView.image = UIImage(path: ratingModel.place.image)!
         
-        positionLabel.text = "\(ratingModel.index)."
+        if let distance = ratingModel.distance, let distanceString = numberFormatter.string(from: NSNumber(value: distance / 1000)) {
+            distanceLabel.text = "\(distanceString) km."
+        } else {
+            distanceLabel.text = nil
+        }
+        
         titleLabel.text = ratingModel.place.title
         
         raterView.isUserInteractionEnabled = false

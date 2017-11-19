@@ -7,8 +7,34 @@
 //
 
 import UIKit
+import CoreLocation
+
+enum Filter: Int {
+    case byRating
+    case byDistance
+    
+    var filterClosure: (RatingListCellModel, RatingListCellModel) -> Bool {
+        switch self {
+        case .byRating:
+            return { model1, model2 in
+                return model1.place.rating >= model2.place.rating
+            }
+        case .byDistance:
+            return { model1, model2 in
+                if let distance1 = model1.distance, let distance2 = model2.distance {
+                    return distance1 <= distance2
+                }
+                
+                return true
+            }
+        }
+        
+    }
+}
 
 class RatingListViewController: ViewController {
+    
+    var filter: Filter!
     
     // MARK: Views
     lazy var tableView: UITableView = {
@@ -16,24 +42,40 @@ class RatingListViewController: ViewController {
         
         self.view.addSubview(tView)
         tView.snp.makeConstraints({ (make) in
-            make.edges.equalToSuperview()
+            make.top.left.right.equalToSuperview()
         })
         
         return tView
     }()
     
+    lazy var segmentControl: UISegmentedControl = {
+        let sControl = UISegmentedControl(items: ["Rating", "Distance"])
+        
+        self.view.addSubview(sControl)
+        sControl.snp.makeConstraints({ (make) in
+            make.top.equalTo(tableView.snp.bottom).offset(16.0)
+            make.bottom.equalTo(-16.0)
+            
+            make.centerX.equalToSuperview()
+        })
+        
+        return sControl
+    }()
+    
     // MARK: View lifecycle
     override func initialize() {
         navigationItem.title = "Rating List"
-        
         configureTableView()
+        
+        segmentControl.addTarget(self, action: #selector(filterChanged), for: .valueChanged)
+        segmentControl.selectedSegmentIndex = 0
+        filter = Filter(rawValue: segmentControl.selectedSegmentIndex)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        setupDatasource()
-        tableView.reloadData()
+        reloadTable()
     }
     
     // MARK: Configure
@@ -42,12 +84,18 @@ class RatingListViewController: ViewController {
     private func configureTableView() {
         tableView.register(RatingListCell.self, forCellReuseIdentifier: RatingListCell.cellId)
         
+        tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.tableFooterView = nil
         tableView.rowHeight = RatingListCell.height
         
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    private func reloadTable() {
+        setupDatasource()
+        tableView.reloadData()
     }
     
     private func setupDatasource() {
@@ -57,9 +105,13 @@ class RatingListViewController: ViewController {
             let model = RatingListCellModel(index: i + 1, place: places[i])
             models.append(model)
         }
-        models.sort { (model1, model2) -> Bool in
-            return model1.place.rating >= model2.place.rating
-        }
+        models.sort(by: filter.filterClosure)
+    }
+ 
+    // MARK: Action
+    @objc private func filterChanged() {
+        filter = Filter(rawValue: segmentControl.selectedSegmentIndex)
+        reloadTable()
     }
     
 }
