@@ -12,6 +12,8 @@
 
 Звісно кожен користувач може додавати свої місця на мапі, котрі побачать інші.
 
+## [Презентація](https://docs.google.com/presentation/d/1R7ypv5fdq2Rv9yZuHFR6ct8oIyrGuIbwNKx-SfsbWf8/edit?usp=sharing)
+
 ## Екрани додатку
 
 1. Головний екран.
