@@ -91,43 +91,4 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         pin.detailCalloutAccessoryView = raterView
     }
     
-//    - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-//    VGPost *post = (VGPost*)view.annotation;
-//    self.postId = post.postId;
-//    [self performSegueWithIdentifier:@"VGPostDetailViewController" sender:nil];
-//    }
-    
-//      - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-//    if (!self.firstTimeRendered) {
-//    [self removeOldAnnotations];
-//    [self getPostsWithoutUserLocation];
-//    }
-//    }
-//
-//    - (void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered {
-//    if (self.firstTimeRendered && fullyRendered)
-//    self.firstTimeRendered = NO;
-//    }
-    
-//    #pragma mark - Edit annotations
-//
-//    - (void)removeOldAnnotations {
-//    MKMapRect visibleRect = self.mapView.visibleMapRect;
-//    NSArray<VGPost<MKAnnotation> *> *allAnnotations = [self.mapView annotations];
-//    NSSet <VGPost<MKAnnotation> *> *annotations = [self.mapView annotationsInMapRect:visibleRect];
-//
-//    for (VGPost<MKAnnotation> *post in allAnnotations) {
-//    if (![annotations containsObject:post])
-//    [self.mapView removeAnnotation:post];
-//    }
-//    }
-//
-//    - (void)addNewAnnotations {
-//    NSArray <VGPost<MKAnnotation> *> *allAnnotations = self.mapView.annotations;
-//    for (VGPost<MKAnnotation> *post in self.posts) {
-//    if (![allAnnotations containsObject:post])
-//    [self.mapView addAnnotation:post];
-//    }
-//    }
-    
 }
