@@ -61,7 +61,7 @@ class PlaceDetailsViewController: ViewController {
     
     // MARK: View lifecycle
     override func initialize() {
-        placeView.imageView.image = UIImage(path: place.image)!
+        configureImageView()
         
         placeView.titleField.isUserInteractionEnabled = false
         placeView.titleField.text = place.title
@@ -83,6 +83,15 @@ class PlaceDetailsViewController: ViewController {
         raterView.rating = place.normRating
     }
     
+    private func configureImageView() {
+        placeView.imageView.image = UIImage(path: place.image)!
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        placeView.imageView.addGestureRecognizer(tapRecognizer)
+        
+        placeView.imageView.isUserInteractionEnabled = true
+    }
+    
     // MARK: Actions
     @objc private func locationTapped() {
         SplashRouter.shared.showLocationPreview(place.location)
@@ -102,4 +111,7 @@ class PlaceDetailsViewController: ViewController {
         storageService.places[index] = place
     }
     
+    @objc private func imageTapped() {
+        SplashRouter.shared.showImagePreview(placeView.imageView.image!)
+    }
 }

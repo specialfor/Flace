@@ -34,8 +34,8 @@ class SplashRouter {
         showModule(MainViewController())
     }
     
-    func dismissToInitial() {
-        navigationController.popToRootViewController(animated: true)
+    func closeCreatePlace() {
+        closeModule()
     }
     
     func showCreatePlace() {
@@ -63,6 +63,18 @@ class SplashRouter {
         showModule(vc)
     }
     
+    func showImagePreview(_ image: UIImage) {
+        navigationController.navigationBar.isHidden = true
+        let vc = ImagePreviewViewController()
+        vc.image = image
+        showModule(vc, animated: false)
+    }
+    
+    func closeImagePreview() {
+        navigationController.navigationBar.isHidden = false
+        closeModule(animated: false)
+    }
+    
     func showPlaceDetails(_ place: Place) {
         let vc = PlaceDetailsViewController()
         vc.place = place
@@ -80,6 +92,10 @@ class SplashRouter {
         if popPrev {
             navigationController.viewControllers = [navigationController.viewControllers.last!]
         }
+    }
+    
+    private func closeModule(animated: Bool = true) {
+        navigationController.popViewController(animated: animated)
     }
     
     private func present(_ viewController: UIViewController, animated: Bool = true) {

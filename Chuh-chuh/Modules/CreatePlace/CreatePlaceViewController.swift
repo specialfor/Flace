@@ -20,6 +20,8 @@ class CreatePlaceViewController: ViewController {
         }
     }
     
+    var image: UIImage?
+    
     // MARK: Views
     lazy var placeView: PlaceView = {
         let pView = PlaceView()
@@ -105,7 +107,7 @@ class CreatePlaceViewController: ViewController {
         if validate() {
             if let place = preparePlace() {
                 StorageService.default.places.append(place)
-                SplashRouter.shared.dismissToInitial()
+                SplashRouter.shared.closeCreatePlace()
             } else {
                 AlertManager.sharedInstance.showAlertOk(message: "Something went wrond. Please, try again.")
             }
@@ -117,7 +119,7 @@ class CreatePlaceViewController: ViewController {
     // MARK: Private
     private func validate() -> Bool {
         let text = placeView.titleField.text ?? ""
-        if let _ = placeView.imageView.image, let _ = location, !text.isEmpty {
+        if let _ = image, let _ = location, !text.isEmpty {
             return true
         }
         
@@ -138,6 +140,7 @@ class CreatePlaceViewController: ViewController {
 extension CreatePlaceViewController: ImageSelectorDelegate {
     
     func selected(image: UIImage) {
+        self.image = image
         placeView.imageView.image = image
     }
     

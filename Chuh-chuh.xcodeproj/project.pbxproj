@@ -48,6 +48,10 @@
 		E7D7C1DD1FC1208400E0F5F0 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */; };
 		E7D7C1DF1FC120FE00E0F5F0 /* RatingListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1DE1FC120FE00E0F5F0 /* RatingListCellModel.swift */; };
 		E7D7C1E11FC12BB400E0F5F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */; };
+		E7D7C1E41FC1352C00E0F5F0 /* ImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E31FC1352C00E0F5F0 /* ImagePreviewViewController.swift */; };
+		E7D7C1E61FC1358300E0F5F0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E51FC1358300E0F5F0 /* GradientView.swift */; };
+		E7D7C1EA1FC1367500E0F5F0 /* CGContext+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E81FC1367500E0F5F0 /* CGContext+Gradient.swift */; };
+		E7D7C1EB1FC1367500E0F5F0 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E91FC1367500E0F5F0 /* UIView+Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +100,10 @@
 		E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		E7D7C1DE1FC120FE00E0F5F0 /* RatingListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListCellModel.swift; sourceTree = "<group>"; };
 		E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E7D7C1E31FC1352C00E0F5F0 /* ImagePreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewController.swift; sourceTree = "<group>"; };
+		E7D7C1E51FC1358300E0F5F0 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E7D7C1E81FC1367500E0F5F0 /* CGContext+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Gradient.swift"; sourceTree = "<group>"; };
+		E7D7C1E91FC1367500E0F5F0 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		E79BD2171FC045B6003A495D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1E21FC1350200E0F5F0 /* ImagePreview */,
 				E7D7C1D41FC11FC800E0F5F0 /* RatingList */,
 				E7D7C1D11FC119B200E0F5F0 /* LocationPreview */,
 				E79BD27A1FC0FB8B003A495D /* PlaceDetails */,
@@ -205,6 +214,7 @@
 		E79BD21F1FC0480C003A495D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1E51FC1358300E0F5F0 /* GradientView.swift */,
 				E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */,
 				E7D7C1D91FC1206F00E0F5F0 /* TableView */,
 				E79BD27F1FC0FC19003A495D /* View.swift */,
@@ -220,6 +230,7 @@
 		E79BD2201FC0480F003A495D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1E71FC1367500E0F5F0 /* Gradient */,
 				E79BD24C1FC0B3CF003A495D /* UIViewExtension.swift */,
 				E79BD2211FC04848003A495D /* UIViewControllerExtension.swift */,
 				E79BD2661FC0DC55003A495D /* MKMapViewExtension.swift */,
@@ -327,6 +338,23 @@
 				E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		E7D7C1E21FC1350200E0F5F0 /* ImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7C1E31FC1352C00E0F5F0 /* ImagePreviewViewController.swift */,
+			);
+			path = ImagePreview;
+			sourceTree = "<group>";
+		};
+		E7D7C1E71FC1367500E0F5F0 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7C1E81FC1367500E0F5F0 /* CGContext+Gradient.swift */,
+				E7D7C1E91FC1367500E0F5F0 /* UIView+Gradient.swift */,
+			);
+			path = Gradient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +504,7 @@
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
 				E7D7C1E11FC12BB400E0F5F0 /* MapView.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
+				E7D7C1E41FC1352C00E0F5F0 /* ImagePreviewViewController.swift in Sources */,
 				E7D7C1DF1FC120FE00E0F5F0 /* RatingListCellModel.swift in Sources */,
 				E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
@@ -488,6 +517,7 @@
 				E7D7C1DC1FC1208400E0F5F0 /* CellModel.swift in Sources */,
 				E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */,
 				E79BD27C1FC0FBA0003A495D /* PlaceDetailsViewController.swift in Sources */,
+				E7D7C1E61FC1358300E0F5F0 /* GradientView.swift in Sources */,
 				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
@@ -499,6 +529,8 @@
 				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
 				E7D7C1DD1FC1208400E0F5F0 /* ConfigurableCell.swift in Sources */,
 				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
+				E7D7C1EB1FC1367500E0F5F0 /* UIView+Gradient.swift in Sources */,
+				E7D7C1EA1FC1367500E0F5F0 /* CGContext+Gradient.swift in Sources */,
 				E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
 				E7D7C1D81FC11FF600E0F5F0 /* RatingListCell.swift in Sources */,
