@@ -57,7 +57,7 @@ class PlaceView: View {
     lazy var titleField: UITextField = {
         let tField = UITextField()
         
-        tField.placeholder = "Enter title"
+        tField.placeholder = "Enter description"
         tField.borderStyle = .roundedRect
         
         let inset = 16.0
