@@ -23,12 +23,37 @@ class CreatePlaceViewController: ViewController {
     var image: UIImage?
     
     // MARK: Views
+    lazy var scrollView: UIScrollView = {
+        let sView = UIScrollView()
+        
+        sView.isUserInteractionEnabled = true
+        
+        self.view.addSubview(sView)
+        sView.snp.makeConstraints({ (make) in
+            make.edges.equalToSuperview()
+        })
+        
+        return sView
+    }()
+    
+    lazy var contentView: UIView = {
+        let cView = UIView()
+        
+        self.scrollView.addSubview(cView)
+        cView.snp.makeConstraints({ (make) in
+            make.top.bottom.left.right.equalTo(scrollView)
+            make.width.equalTo(self.view)
+        })
+        
+        return cView
+    }()
+    
     lazy var placeView: PlaceView = {
         let pView = PlaceView()
         
-        self.view.addSubview(pView)
+        contentView.addSubview(pView)
         pView.snp.makeConstraints({ (make) in
-            make.edges.equalToSuperview()
+            make.top.left.right.equalToSuperview()
         })
         
         return pView
@@ -42,8 +67,10 @@ class CreatePlaceViewController: ViewController {
         
         button.setTitle("Create", for: .normal)
         
-        self.view.addSubview(button)
+        contentView.addSubview(button)
         button.snp.makeConstraints({ (make) in
+            make.top.equalTo(placeView.snp.bottom).offset(inset)
+            
             make.height.equalTo(height)
             make.right.bottom.equalTo(-inset)
         })
@@ -78,25 +105,17 @@ class CreatePlaceViewController: ViewController {
     // MARK: Keyboard
     override func keyboardNotified(endFrame: CGRect) {
         if !isKeyboardGoingToHide(endFrame) {
-            placeView.scrollView.snp.updateConstraints({ (make) in
+            scrollView.snp.updateConstraints({ (make) in
                 make.bottom.equalTo(-endFrame.height)
-            })
-            
-            placeView.segmentControl.snp.updateConstraints({ (make) in
-                make.bottom.equalTo(-16)
             })
             
             var rect = placeView.titleField.frame
             rect.origin.y += 32.0
             
-            placeView.scrollView.scrollRectToVisible(rect, animated: true)
+            scrollView.scrollRectToVisible(rect, animated: true)
         } else {
-            placeView.scrollView.snp.updateConstraints({ (make) in
+            scrollView.snp.updateConstraints({ (make) in
                 make.bottom.equalTo(0)
-            })
-            
-            placeView.segmentControl.snp.updateConstraints({ (make) in
-                make.bottom.equalTo(-80)
             })
         }
     }
