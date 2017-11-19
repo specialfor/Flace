@@ -38,7 +38,7 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         
         if pin == nil {
             pin = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            pin?.image = #imageLiteral(resourceName: "ic_map_pin_big")
+            pin?.image = #imageLiteral(resourceName: "pin")
             pin?.canShowCallout = true
             pin?.centerOffset = CGPoint(x: 0, y: -(pin!.image!.size.width / 2))
         } else {
@@ -71,8 +71,12 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         
         let image = UIImage(path: annotation.place.image)!
         let imageView = UIImageView(image: image)
-        imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        
+        imageView.contentMode = .scaleAspectFill
+        
         imageView.layer.cornerRadius = 6.0
+        imageView.layer.masksToBounds = true
         
         pin.leftCalloutAccessoryView = imageView
         

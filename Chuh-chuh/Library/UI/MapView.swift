@@ -41,7 +41,7 @@ class MapView: View {
     // MARK: Setup
     override func baseSetup() {
         map.showsUserLocation = true
-        pinView.image = #imageLiteral(resourceName: "ic_map_pin_big")
+        pinView.image = #imageLiteral(resourceName: "pin")
     }
     
 }

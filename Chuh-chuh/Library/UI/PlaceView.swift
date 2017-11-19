@@ -41,8 +41,7 @@ class PlaceView: View {
         let imgView = UIImageView()
         
         let width = UIScreen.main.bounds.width
-        
-        imgView.backgroundColor = .red
+
         imgView.clipsToBounds = true
         imgView.contentMode = .scaleAspectFill
         
@@ -82,7 +81,8 @@ class PlaceView: View {
         button.setTitleColor(theme.textColor, for: .normal)
         
         button.setTitle("Select Location", for: .normal)
-        button.setImage(#imageLiteral(resourceName: "ic_map_pin_small"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "pin"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8.0, bottom: 0, right: 0)
         
         button.contentHorizontalAlignment = .left
@@ -106,6 +106,7 @@ class PlaceView: View {
     
     // MARK: Setup
     override func baseSetup() {
+        imageView.image = #imageLiteral(resourceName: "placeholder")
         locationButton.isHidden = false
     }
     

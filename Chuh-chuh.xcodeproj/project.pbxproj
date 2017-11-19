@@ -41,8 +41,13 @@
 		E79BD27E1FC0FBBA003A495D /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD27D1FC0FBBA003A495D /* PlaceView.swift */; };
 		E79BD2801FC0FC1A003A495D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD27F1FC0FC19003A495D /* View.swift */; };
 		E79BD2821FC1021E003A495D /* RaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2811FC1021E003A495D /* RaterView.swift */; };
-		E7D7C1D01FC118B300E0F5F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */; };
 		E7D7C1D31FC119C600E0F5F0 /* LocationPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */; };
+		E7D7C1D61FC11FD700E0F5F0 /* RatingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1D51FC11FD700E0F5F0 /* RatingListViewController.swift */; };
+		E7D7C1D81FC11FF600E0F5F0 /* RatingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1D71FC11FF600E0F5F0 /* RatingListCell.swift */; };
+		E7D7C1DC1FC1208400E0F5F0 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1DA1FC1208400E0F5F0 /* CellModel.swift */; };
+		E7D7C1DD1FC1208400E0F5F0 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */; };
+		E7D7C1DF1FC120FE00E0F5F0 /* RatingListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1DE1FC120FE00E0F5F0 /* RatingListCellModel.swift */; };
+		E7D7C1E11FC12BB400E0F5F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,8 +89,13 @@
 		E79BD27D1FC0FBBA003A495D /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		E79BD27F1FC0FC19003A495D /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E79BD2811FC1021E003A495D /* RaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaterView.swift; sourceTree = "<group>"; };
-		E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewViewController.swift; sourceTree = "<group>"; };
+		E7D7C1D51FC11FD700E0F5F0 /* RatingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListViewController.swift; sourceTree = "<group>"; };
+		E7D7C1D71FC11FF600E0F5F0 /* RatingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListCell.swift; sourceTree = "<group>"; };
+		E7D7C1DA1FC1208400E0F5F0 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		E7D7C1DE1FC120FE00E0F5F0 /* RatingListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingListCellModel.swift; sourceTree = "<group>"; };
+		E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +163,7 @@
 		E79BD2171FC045B6003A495D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1D41FC11FC800E0F5F0 /* RatingList */,
 				E7D7C1D11FC119B200E0F5F0 /* LocationPreview */,
 				E79BD27A1FC0FB8B003A495D /* PlaceDetails */,
 				E79BD2611FC0CD5D003A495D /* SelectLocation */,
@@ -194,13 +205,14 @@
 		E79BD21F1FC0480C003A495D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1E01FC12BB400E0F5F0 /* MapView.swift */,
+				E7D7C1D91FC1206F00E0F5F0 /* TableView */,
 				E79BD27F1FC0FC19003A495D /* View.swift */,
 				E79BD24A1FC0B399003A495D /* Button.swift */,
 				E79BD2231FC04854003A495D /* ViewController.swift */,
 				E79BD2201FC0480F003A495D /* Extension */,
 				E79BD27D1FC0FBBA003A495D /* PlaceView.swift */,
 				E79BD2811FC1021E003A495D /* RaterView.swift */,
-				E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -296,6 +308,25 @@
 				E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */,
 			);
 			path = LocationPreview;
+			sourceTree = "<group>";
+		};
+		E7D7C1D41FC11FC800E0F5F0 /* RatingList */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7C1D51FC11FD700E0F5F0 /* RatingListViewController.swift */,
+				E7D7C1D71FC11FF600E0F5F0 /* RatingListCell.swift */,
+				E7D7C1DE1FC120FE00E0F5F0 /* RatingListCellModel.swift */,
+			);
+			path = RatingList;
+			sourceTree = "<group>";
+		};
+		E7D7C1D91FC1206F00E0F5F0 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7C1DA1FC1208400E0F5F0 /* CellModel.swift */,
+				E7D7C1DB1FC1208400E0F5F0 /* ConfigurableCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,15 +474,18 @@
 				E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */,
 				E79BD2791FC0EA48003A495D /* PlaceAnnotation.swift in Sources */,
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
+				E7D7C1E11FC12BB400E0F5F0 /* MapView.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
+				E7D7C1DF1FC120FE00E0F5F0 /* RatingListCellModel.swift in Sources */,
 				E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */,
-				E7D7C1D01FC118B300E0F5F0 /* MapView.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
 				E79BD2631FC0CD7B003A495D /* SelectLocationViewController.swift in Sources */,
 				E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */,
 				E79BD2671FC0DC55003A495D /* MKMapViewExtension.swift in Sources */,
 				E79BD22C1FC04967003A495D /* ThemeManager.swift in Sources */,
+				E7D7C1D61FC11FD700E0F5F0 /* RatingListViewController.swift in Sources */,
 				E79BD2061FC04565003A495D /* AppDelegate.swift in Sources */,
+				E7D7C1DC1FC1208400E0F5F0 /* CellModel.swift in Sources */,
 				E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */,
 				E79BD27C1FC0FBA0003A495D /* PlaceDetailsViewController.swift in Sources */,
 				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
@@ -463,9 +497,11 @@
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
 				E79BD2801FC0FC1A003A495D /* View.swift in Sources */,
 				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
+				E7D7C1DD1FC1208400E0F5F0 /* ConfigurableCell.swift in Sources */,
 				E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */,
 				E79BD2691FC0E03F003A495D /* PhotoSaver.swift in Sources */,
 				E79BD22B1FC04967003A495D /* Theme.swift in Sources */,
+				E7D7C1D81FC11FF600E0F5F0 /* RatingListCell.swift in Sources */,
 				E79BD2751FC0E76D003A495D /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

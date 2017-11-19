@@ -47,6 +47,7 @@ class MainViewController: ViewController, LocationServiceDelegate {
     // MARK: View lifecycle
     override func initialize() {
         navigationItem.title = "Places Nearby"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(listTapped))
         
         configureMapView()
         
@@ -85,6 +86,10 @@ class MainViewController: ViewController, LocationServiceDelegate {
     // MARK: Actions
     @objc func addTapped() {
         SplashRouter.shared.showCreatePlace()
+    }
+    
+    @objc private func listTapped() {
+        SplashRouter.shared.showRatingList()
     }
     
     // MARK: LocationServiceDelegate

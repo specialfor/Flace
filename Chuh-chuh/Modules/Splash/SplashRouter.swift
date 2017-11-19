@@ -69,6 +69,10 @@ class SplashRouter {
         showModule(vc)
     }
     
+    func showRatingList() {
+        showModule(RatingListViewController())
+    }
+    
     // MAKR: Show, present, dismiss
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = false) {
         navigationController.pushViewController(viewController, animated: animated)

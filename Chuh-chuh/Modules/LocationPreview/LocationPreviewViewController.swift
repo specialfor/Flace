@@ -58,7 +58,7 @@ class LocationPreviewViewController: ViewController, MKMapViewDelegate {
         
         if pin == nil {
             pin = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            pin?.image = #imageLiteral(resourceName: "ic_map_pin_big")
+            pin?.image = #imageLiteral(resourceName: "pin")
             pin?.centerOffset = CGPoint(x: 0, y: -(pin!.image!.size.width / 2))
         } else {
             pin?.annotation = annotation
