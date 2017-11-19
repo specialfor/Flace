@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Configure window
-        UIView.appearance().tintColor = ThemeManager.shared.theme.mainColor
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.tintColor = ThemeManager.shared.theme.mainColor
         window?.rootViewController = SplashRouter.shared.rootViewController
         window?.makeKeyAndVisible()
         
