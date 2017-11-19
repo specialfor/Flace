@@ -8,5 +8,6 @@ target 'Chuh-chuh' do
   # Pods for Chuh-chuh
   pod 'SnapKit', '~> 4.0.0'
   pod 'Cosmos', '~> 12.0'
+  pod 'MultiSelectSegmentedControl'
 
 end

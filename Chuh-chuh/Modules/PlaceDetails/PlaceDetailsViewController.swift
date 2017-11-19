@@ -12,13 +12,38 @@ class PlaceDetailsViewController: ViewController {
     
     var place: Place!
     
-    // MARK: Views
+    // MARK:
+    lazy var scrollView: UIScrollView = {
+        let sView = UIScrollView()
+        
+        sView.isUserInteractionEnabled = true
+        
+        self.view.addSubview(sView)
+        sView.snp.makeConstraints({ (make) in
+            make.edges.equalToSuperview()
+        })
+        
+        return sView
+    }()
+    
+    lazy var contentView: UIView = {
+        let cView = UIView()
+        
+        self.scrollView.addSubview(cView)
+        cView.snp.makeConstraints({ (make) in
+            make.top.bottom.left.right.equalTo(scrollView)
+            make.width.equalTo(self.view)
+        })
+        
+        return cView
+    }()
+    
     lazy var placeView: PlaceView = {
         let pView = PlaceView()
         
-        self.view.addSubview(pView)
+        contentView.addSubview(pView)
         pView.snp.makeConstraints({ (make) in
-            make.edges.equalToSuperview()
+            make.left.top.right.equalToSuperview()
         })
         
         return pView
@@ -30,8 +55,10 @@ class PlaceDetailsViewController: ViewController {
         let inset = 16.0
         let height = 30.0
         
-        self.view.addSubview(rView)
+        contentView.addSubview(rView)
         rView.snp.makeConstraints({ (make) in
+            make.top.equalTo(placeView.snp.bottom).offset(24)
+            
             make.height.equalTo(height)
             make.bottom.equalTo(-inset)
             make.right.equalTo(-inset).priority(750)
@@ -48,12 +75,13 @@ class PlaceDetailsViewController: ViewController {
         let height = 44.0
         let inset = 16.0
         
-        self.view.addSubview(button)
+        contentView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.height.equalTo(height)
+            make.centerY.equalTo(raterView)
             
             make.left.equalTo(raterView.snp.right).offset(inset)
-            make.right.bottom.equalTo(-inset)
+            make.right.equalTo(-inset)
         }
         
         return button
@@ -67,7 +95,7 @@ class PlaceDetailsViewController: ViewController {
         let height = 44.0
         let inset = 16.0
         
-        self.view.addSubview(button)
+        contentView.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.height.equalTo(height)
             
@@ -97,6 +125,8 @@ class PlaceDetailsViewController: ViewController {
         
         deleteButton.isHidden = true
         deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+        
+        configureSegment()
     }
     
     private func adjustRatingView(isRated: Bool) {
@@ -112,6 +142,11 @@ class PlaceDetailsViewController: ViewController {
         placeView.imageView.addGestureRecognizer(tapRecognizer)
         
         placeView.imageView.isUserInteractionEnabled = true
+    }
+    
+    private func configureSegment() {
+        placeView.segmentControl.isUserInteractionEnabled = false
+        placeView.segmentControl.selectedSegmentIndexes = IndexSet(place.tags.map { $0.rawValue })
     }
     
     // MARK: Actions

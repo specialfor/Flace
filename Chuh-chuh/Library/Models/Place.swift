@@ -14,6 +14,7 @@ class Place: Codable, Equatable {
     let title: String
     let image: String
     let location: Location
+    var tags: [Tag] = []
     var rating: Double
     var isRated: Bool
     

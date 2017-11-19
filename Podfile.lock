@@ -1,15 +1,18 @@
 PODS:
   - Cosmos (12.0.1)
+  - MultiSelectSegmentedControl (1.1.2)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Cosmos (~> 12.0)
+  - MultiSelectSegmentedControl
   - SnapKit (~> 4.0.0)
 
 SPEC CHECKSUMS:
   Cosmos: 4a9f57998a08788a1062c7b8eefbc62d2b590f39
+  MultiSelectSegmentedControl: 24844861c16dd6e3c36a80043494daa7855494f1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: c9d412675d23617642b043287693fc33512107e4
+PODFILE CHECKSUM: ffb69396291a565398c6395e719e6fba4eb46c1a
 
 COCOAPODS: 1.3.1

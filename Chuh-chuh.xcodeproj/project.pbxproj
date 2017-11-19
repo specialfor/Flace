@@ -51,6 +51,7 @@
 		E7D7C1E61FC1358300E0F5F0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E51FC1358300E0F5F0 /* GradientView.swift */; };
 		E7D7C1EA1FC1367500E0F5F0 /* CGContext+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E81FC1367500E0F5F0 /* CGContext+Gradient.swift */; };
 		E7D7C1EB1FC1367500E0F5F0 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1E91FC1367500E0F5F0 /* UIView+Gradient.swift */; };
+		E7D7C1EE1FC16F0000E0F5F0 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1ED1FC16F0000E0F5F0 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		E7D7C1E51FC1358300E0F5F0 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E7D7C1E81FC1367500E0F5F0 /* CGContext+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGContext+Gradient.swift"; sourceTree = "<group>"; };
 		E7D7C1E91FC1367500E0F5F0 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		E7D7C1ED1FC16F0000E0F5F0 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 			children = (
 				E79BD25D1FC0CCA5003A495D /* Location.swift */,
 				E79BD25F1FC0CCC7003A495D /* Place.swift */,
+				E7D7C1ED1FC16F0000E0F5F0 /* Tag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -465,11 +468,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiSelectSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +513,7 @@
 				E79BD2501FC0B4F2003A495D /* CreatePlaceViewController.swift in Sources */,
 				E79BD27C1FC0FBA0003A495D /* PlaceDetailsViewController.swift in Sources */,
 				E7D7C1E61FC1358300E0F5F0 /* GradientView.swift in Sources */,
+				E7D7C1EE1FC16F0000E0F5F0 /* Tag.swift in Sources */,
 				E79BD24B1FC0B399003A495D /* Button.swift in Sources */,
 				E79BD22A1FC04967003A495D /* MainTheme.swift in Sources */,
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
