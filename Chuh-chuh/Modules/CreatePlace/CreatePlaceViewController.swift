@@ -82,6 +82,10 @@ class CreatePlaceViewController: ViewController {
                 make.bottom.equalTo(-endFrame.height)
             })
             
+            placeView.segmentControl.snp.updateConstraints({ (make) in
+                make.bottom.equalTo(-16)
+            })
+            
             var rect = placeView.titleField.frame
             rect.origin.y += 32.0
             
@@ -89,6 +93,10 @@ class CreatePlaceViewController: ViewController {
         } else {
             placeView.scrollView.snp.updateConstraints({ (make) in
                 make.bottom.equalTo(0)
+            })
+            
+            placeView.segmentControl.snp.updateConstraints({ (make) in
+                make.bottom.equalTo(-80)
             })
         }
     }
@@ -131,7 +139,11 @@ class CreatePlaceViewController: ViewController {
     
     private func preparePlace() -> Place? {
         if let imageUrl = PhotoSaver().saveImage(placeView.imageView.image!) {
-            return Place(id: imageUrl, title: placeView.titleField.text!, image: imageUrl, location: location!, rating: 0, isRated: false)
+            let place = Place(id: imageUrl, title: placeView.titleField.text!, image: imageUrl, location: location!, rating: 0, isRated: false)
+            
+            place.tags = placeView.segmentControl.selectedSegmentIndexes.map { Tag(rawValue: $0)! }
+            
+            return place
         }
         
         return nil

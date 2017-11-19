@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Tag: Int, Codable {
+enum Tag: Int, Codable, Hashable {
     case romantic
     case relax
     case sport

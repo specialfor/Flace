@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MultiSelectSegmentedControl
 
 class PlaceView: View {
     
@@ -31,7 +32,6 @@ class PlaceView: View {
         cView.snp.makeConstraints({ (make) in
             make.top.bottom.left.right.equalTo(scrollView)
             make.width.equalTo(self)
-            make.height.equalTo(self).priority(250)
         })
         
         return cView
@@ -96,11 +96,24 @@ class PlaceView: View {
             
             make.top.equalTo(titleField.snp.bottom).offset(inset)
             make.left.right.equalTo(titleField)
-            
-            make.bottom.greaterThanOrEqualTo(-16)
         })
         
         return button
+    }()
+    
+    lazy var segmentControl: MultiSelectSegmentedControl = {
+        let sControl = MultiSelectSegmentedControl(items: Tag.titles)
+        
+        contentView.addSubview(sControl)
+        sControl.snp.makeConstraints({ (make) in
+            make.height.equalTo(30)
+            make.top.equalTo(locationButton.snp.bottom).offset(16.0)
+            make.left.right.equalTo(locationButton)
+            
+            make.bottom.equalTo(-80)
+        })
+        
+        return sControl
     }()
     
     
@@ -108,6 +121,8 @@ class PlaceView: View {
     override func baseSetup() {
         imageView.image = #imageLiteral(resourceName: "placeholder")
         locationButton.isHidden = false
+        
+        segmentControl.isHidden = false
     }
     
 }

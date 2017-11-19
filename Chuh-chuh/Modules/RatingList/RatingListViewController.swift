@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MultiSelectSegmentedControl
 
 enum Filter: Int {
     case byRating
@@ -35,6 +36,7 @@ enum Filter: Int {
 class RatingListViewController: ViewController {
     
     var filter: Filter!
+    var tags: Set<Tag> = []
     
     // MARK: Views
     lazy var tableView: UITableView = {
@@ -54,9 +56,22 @@ class RatingListViewController: ViewController {
         self.view.addSubview(sControl)
         sControl.snp.makeConstraints({ (make) in
             make.top.equalTo(tableView.snp.bottom).offset(16.0)
-            make.bottom.equalTo(-16.0)
-            
             make.centerX.equalToSuperview()
+        })
+        
+        return sControl
+    }()
+    
+    lazy var tagsSegment: MultiSelectSegmentedControl = {
+        let sControl = MultiSelectSegmentedControl(items: Tag.titles)
+        
+        let inset = 16.0
+        
+        self.view.addSubview(sControl)
+        sControl.snp.makeConstraints({ (make) in
+            make.top.equalTo(segmentControl.snp.bottom).offset(inset)
+            make.left.equalTo(inset)
+            make.right.bottom.equalTo(-inset)
         })
         
         return sControl
@@ -70,6 +85,9 @@ class RatingListViewController: ViewController {
         segmentControl.addTarget(self, action: #selector(filterChanged), for: .valueChanged)
         segmentControl.selectedSegmentIndex = 0
         filter = Filter(rawValue: segmentControl.selectedSegmentIndex)
+        
+        tagsSegment.isHidden = false
+        tagsSegment.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,6 +123,14 @@ class RatingListViewController: ViewController {
             let model = RatingListCellModel(index: i + 1, place: places[i])
             models.append(model)
         }
+        
+        if !tags.isEmpty {
+            models = models.filter { (model) -> Bool in
+                let set = Set<Tag>(model.place.tags)
+                return set.intersection(tags) == tags
+            }
+        }
+        
         models.sort(by: filter.filterClosure)
     }
  
@@ -139,6 +165,18 @@ extension RatingListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         SplashRouter.shared.showPlaceDetails(models[indexPath.row].place)
+    }
+    
+}
+
+// MARK: MultiSelectSegmentedControlDelegate
+extension RatingListViewController: MultiSelectSegmentedControlDelegate {
+    
+    func multiSelect(_ multiSelectSegmentedControl: MultiSelectSegmentedControl, didChangeValue value: Bool, at index: UInt) {
+        
+        let arr = multiSelectSegmentedControl.selectedSegmentIndexes.map { Tag(rawValue: $0)! }
+        tags = Set<Tag>(arr)
+        reloadTable()
     }
     
 }

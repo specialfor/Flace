@@ -97,6 +97,8 @@ class PlaceDetailsViewController: ViewController {
         
         deleteButton.isHidden = true
         deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
+        
+        configureSegment()
     }
     
     private func adjustRatingView(isRated: Bool) {
@@ -112,6 +114,11 @@ class PlaceDetailsViewController: ViewController {
         placeView.imageView.addGestureRecognizer(tapRecognizer)
         
         placeView.imageView.isUserInteractionEnabled = true
+    }
+    
+    private func configureSegment() {
+        placeView.segmentControl.isUserInteractionEnabled = false
+        placeView.segmentControl.selectedSegmentIndexes = IndexSet(place.tags.map { $0.rawValue })
     }
     
     // MARK: Actions
