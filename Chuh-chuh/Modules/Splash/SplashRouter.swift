@@ -53,6 +53,12 @@ class SplashRouter {
         showModule(vc)
     }
     
+    func showPlaceDetails(_ place: Place) {
+        let vc = PlaceDetailsViewController()
+        vc.place = place
+        showModule(vc)
+    }
+    
     // MAKR: Show, present, dismiss
     private func showModule(_ viewController: UIViewController, animated: Bool = true, popPrev: Bool = false) {
         navigationController.pushViewController(viewController, animated: animated)

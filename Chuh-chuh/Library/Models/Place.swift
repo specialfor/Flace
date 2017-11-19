@@ -8,13 +8,22 @@
 
 import Foundation
 
-struct Place: Codable {
+class Place: Codable {
     
     let id: String
     let title: String
     let image: String
     let location: Location
-    let rating: Double
-    let isRated: Bool = false
+    var rating: Double
+    var isRated: Bool
+    
+    init(id: String, title: String, image: String, location: Location, rating: Double, isRated: Bool) {
+        self.id = id
+        self.title = title
+        self.image = image
+        self.location = location
+        self.rating = rating
+        self.isRated = isRated
+    }
     
 }

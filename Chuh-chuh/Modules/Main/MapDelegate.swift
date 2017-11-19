@@ -58,13 +58,21 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         // TODO: check
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard let annotation = view.annotation as? PlaceAnnotation else {
+            return
+        }
+        
+        SplashRouter.shared.showPlaceDetails(annotation.place)
+    }
+    
     private func configureCallout(_ pin: MKAnnotationView) {
         let detailButton = UIButton(type: .detailDisclosure)
         var frame = detailButton.frame
         frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width / 2, height: frame.height / 2)
         detailButton.frame = frame
-        
-        
+        detailButton.setImage(nil, for: .normal)
+
         pin.rightCalloutAccessoryView = detailButton
         
         let annotation = pin.annotation as! PlaceAnnotation
@@ -76,12 +84,18 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         
         pin.leftCalloutAccessoryView = imageView
         
-//        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 20, height: 60))
-//        label.textColor = ThemeManager.shared.theme.lightGray
-//        label.text = annotation.place.title
-//
-//        pin.detailCalloutAccessoryView = label
+        let raterView = RaterView()
+        raterView.frame = CGRect(x: 0, y: 0, width: 80, height: 20)
+        raterView.isUserInteractionEnabled = false
+        
+        pin.detailCalloutAccessoryView = raterView
     }
+    
+//    - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+//    VGPost *post = (VGPost*)view.annotation;
+//    self.postId = post.postId;
+//    [self performSegueWithIdentifier:@"VGPostDetailViewController" sender:nil];
+//    }
     
 //      - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
 //    if (!self.firstTimeRendered) {

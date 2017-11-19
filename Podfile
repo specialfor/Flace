@@ -9,5 +9,6 @@ target 'Chuh-chuh' do
   pod 'SnapKit', '~> 4.0.0'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Cosmos', '~> 12.0'
 
 end
