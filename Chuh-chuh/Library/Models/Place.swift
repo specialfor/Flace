@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Place: Codable {
+class Place: Codable, Equatable {
     
     let id: String
     let title: String
@@ -18,7 +18,7 @@ class Place: Codable {
     var isRated: Bool
     
     var normRating: Double {
-        return min(rating / 5, 5)
+        return rating
     }
     
     init(id: String, title: String, image: String, location: Location, rating: Double, isRated: Bool) {
@@ -29,5 +29,10 @@ class Place: Codable {
         self.rating = rating
         self.isRated = isRated
     }
+    
+    static func ==(lhs: Place, rhs: Place) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     
 }

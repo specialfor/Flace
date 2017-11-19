@@ -94,7 +94,7 @@ class SplashRouter {
         }
     }
     
-    private func closeModule(animated: Bool = true) {
+    func closeModule(animated: Bool = true) {
         navigationController.popViewController(animated: animated)
     }
     

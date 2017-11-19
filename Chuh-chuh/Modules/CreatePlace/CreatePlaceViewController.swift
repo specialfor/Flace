@@ -61,6 +61,9 @@ class CreatePlaceViewController: ViewController {
         placeView.locationButton.addTarget(self, action: #selector(locationTapped), for: .touchUpInside)
         createButton.addTarget(self, action: #selector(createTapped), for: .touchUpInside)
         
+        placeView.titleField.returnKeyType = .done
+        placeView.titleField.delegate = self
+        
         configureImageView()
     }
     
@@ -128,9 +131,7 @@ class CreatePlaceViewController: ViewController {
     
     private func preparePlace() -> Place? {
         if let imageUrl = PhotoSaver().saveImage(placeView.imageView.image!) {
-            let rating = arc4random_uniform(10)
-            
-            return Place(id: imageUrl, title: placeView.titleField.text!, image: imageUrl, location: location!, rating: Double(rating), isRated: false)
+            return Place(id: imageUrl, title: placeView.titleField.text!, image: imageUrl, location: location!, rating: 0, isRated: false)
         }
         
         return nil
@@ -146,6 +147,15 @@ extension CreatePlaceViewController: ImageSelectorDelegate {
     
     func imageSelectorCanceled() {
         // NOTE: do nothing
+    }
+    
+}
+
+extension CreatePlaceViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(false)
+        return true
     }
     
 }

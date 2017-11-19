@@ -23,6 +23,7 @@ class MapDelegate: NSObject, MKMapViewDelegate {
     
     var annotations: [PlaceAnnotation] = [] {
         didSet {
+            mapView.removeAnnotations(mapView.annotations)
             mapView.addAnnotations(annotations)
         }
     }

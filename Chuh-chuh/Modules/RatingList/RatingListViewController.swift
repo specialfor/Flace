@@ -31,6 +31,8 @@ class RatingListViewController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        setupDatasource()
         tableView.reloadData()
     }
     
@@ -46,11 +48,17 @@ class RatingListViewController: ViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+    }
+    
+    private func setupDatasource() {
+        models = []
         let places = StorageService.default.places
         for i in 0..<places.count {
             let model = RatingListCellModel(index: i + 1, place: places[i])
             models.append(model)
+        }
+        models.sort { (model1, model2) -> Bool in
+            return model1.place.rating >= model2.place.rating
         }
     }
     

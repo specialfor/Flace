@@ -59,6 +59,25 @@ class PlaceDetailsViewController: ViewController {
         return button
     }()
     
+    lazy var deleteButton: Button = {
+        let button = Button()
+        
+        button.setTitle("Delete", for: .normal)
+        
+        let height = 44.0
+        let inset = 16.0
+        
+        self.view.addSubview(button)
+        button.snp.makeConstraints { (make) in
+            make.height.equalTo(height)
+            
+            make.left.equalTo(inset)
+            make.bottom.equalTo(-inset)
+        }
+        
+        return button
+    }()
+    
     // MARK: View lifecycle
     override func initialize() {
         configureImageView()
@@ -75,6 +94,8 @@ class PlaceDetailsViewController: ViewController {
         if !place.isRated {
             rateButton.addTarget(self, action: #selector(rateTapped), for: .touchUpInside)
         }
+        
+        deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
     }
     
     private func adjustRatingView(isRated: Bool) {
@@ -93,6 +114,14 @@ class PlaceDetailsViewController: ViewController {
     }
     
     // MARK: Actions
+    @objc private func deleteTapped() {
+        let storage = StorageService.default
+        storage.places.remove(at: storage.places.index(of: place)!)
+        storage.save()
+        
+        SplashRouter.shared.closeModule()
+    }
+    
     @objc private func locationTapped() {
         SplashRouter.shared.showLocationPreview(place.location)
     }
