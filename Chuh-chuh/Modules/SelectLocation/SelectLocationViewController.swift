@@ -14,8 +14,8 @@ class SelectLocationViewController: ViewController {
     var location: Location?
     
     // MARK: Views
-    lazy var mapView: MKMapView = {
-        let mView = MKMapView()
+    lazy var mapView: MapView = {
+        let mView = MapView()
         
         self.view.addSubview(mView)
         mView.snp.makeConstraints({ (make) in
@@ -23,21 +23,6 @@ class SelectLocationViewController: ViewController {
         })
         
         return mView
-    }()
-    
-    lazy var pinView: UIImageView = {
-        let imageView = UIImageView()
-        
-        let width = 56.0
-        
-        self.view.addSubview(imageView)
-        imageView.snp.makeConstraints( { (make) in
-            make.width.height.equalTo(width)
-            make.centerX.equalTo(mapView)
-            make.centerY.equalTo(mapView).offset(-(width / 2))
-        })
-        
-        return imageView
     }()
     
     lazy var doneButton: Button = {
@@ -59,23 +44,22 @@ class SelectLocationViewController: ViewController {
     
     // MARK: View lifecycle
     override func initialize() {
-        mapView.showsUserLocation = true
+        navigationItem.title = "Select Location"
         
-        pinView.image = #imageLiteral(resourceName: "ic_map_pin_big")
-        
+        mapView.isHidden = false
         doneButton.addTarget(self, action: #selector(doneTapped), for: .touchUpInside)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         mapView.layoutIfNeeded()
         
         if let location = self.location {
             let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            mapView.adjustRegion(with: coordinate)
+            mapView.map.adjustRegion(with: coordinate)
         } else if let coordinate = LocationService.sharedInstance.currentLocation?.coordinate {
-            mapView.adjustRegion(with: coordinate)
+            mapView.map.adjustRegion(with: coordinate)
         }
     }
     
@@ -102,8 +86,8 @@ class SelectLocationViewController: ViewController {
     
     // MARK: Private
     private func prepareLocation() -> CLLocation {
-        let point = CGPoint(x: pinView.frame.midX, y: pinView.frame.maxY)
-        let coordinates = mapView.convert(point, toCoordinateFrom: nil)
+        let point = CGPoint(x: mapView.pinView.frame.midX, y: mapView.pinView.frame.maxY)
+        let coordinates = mapView.map.convert(point, toCoordinateFrom: nil)
         return CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
 }

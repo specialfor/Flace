@@ -10,10 +10,10 @@ import MapKit
 
 extension MKMapView {
     
-    func adjustRegion(with coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = Constants.radius) {
+    func adjustRegion(with coordinate: CLLocationCoordinate2D, radius: CLLocationDistance = Constants.radius, animated: Bool = true) {
         var region = MKCoordinateRegionMakeWithDistance(coordinate, radius, radius)
         region = self.regionThatFits(region)
-        self.setRegion(region, animated: true)
+        self.setRegion(region, animated: animated)
     }
     
     func reloadData() {

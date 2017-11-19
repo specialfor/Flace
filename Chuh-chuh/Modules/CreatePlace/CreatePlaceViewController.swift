@@ -105,7 +105,7 @@ class CreatePlaceViewController: ViewController {
         if validate() {
             if let place = preparePlace() {
                 StorageService.default.places.append(place)
-                SplashRouter.shared.showInitial()
+                SplashRouter.shared.dismissToInitial()
             } else {
                 AlertManager.sharedInstance.showAlertOk(message: "Something went wrond. Please, try again.")
             }

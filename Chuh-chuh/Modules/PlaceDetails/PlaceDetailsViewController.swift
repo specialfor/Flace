@@ -66,8 +66,8 @@ class PlaceDetailsViewController: ViewController {
         placeView.titleField.isUserInteractionEnabled = false
         placeView.titleField.text = place.title
         
-        placeView.locationButton.isUserInteractionEnabled = false
         placeView.locationButton.setTitle(place.location.title, for: .normal)
+        placeView.locationButton.addTarget(self, action: #selector(locationTapped), for: .touchUpInside)
         
         raterView.isHidden = false
         adjustRatingView(isRated: place.isRated)
@@ -84,6 +84,10 @@ class PlaceDetailsViewController: ViewController {
     }
     
     // MARK: Actions
+    @objc private func locationTapped() {
+        SplashRouter.shared.showLocationPreview(place.location)
+    }
+    
     @objc private func rateTapped() {
         rateButton.removeFromSuperview()
         

@@ -55,6 +55,7 @@ class MainViewController: ViewController, LocationServiceDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        mapDelegate.places = StorageService.default.places
         mapView.reloadData()
     }
     

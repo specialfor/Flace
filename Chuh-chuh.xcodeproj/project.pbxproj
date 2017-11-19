@@ -41,6 +41,8 @@
 		E79BD27E1FC0FBBA003A495D /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD27D1FC0FBBA003A495D /* PlaceView.swift */; };
 		E79BD2801FC0FC1A003A495D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD27F1FC0FC19003A495D /* View.swift */; };
 		E79BD2821FC1021E003A495D /* RaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2811FC1021E003A495D /* RaterView.swift */; };
+		E7D7C1D01FC118B300E0F5F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */; };
+		E7D7C1D31FC119C600E0F5F0 /* LocationPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		E79BD27D1FC0FBBA003A495D /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		E79BD27F1FC0FC19003A495D /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E79BD2811FC1021E003A495D /* RaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaterView.swift; sourceTree = "<group>"; };
+		E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 		E79BD2171FC045B6003A495D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7C1D11FC119B200E0F5F0 /* LocationPreview */,
 				E79BD27A1FC0FB8B003A495D /* PlaceDetails */,
 				E79BD2611FC0CD5D003A495D /* SelectLocation */,
 				E79BD24E1FC0B4DC003A495D /* CreatePlace */,
@@ -195,6 +200,7 @@
 				E79BD2201FC0480F003A495D /* Extension */,
 				E79BD27D1FC0FBBA003A495D /* PlaceView.swift */,
 				E79BD2811FC1021E003A495D /* RaterView.swift */,
+				E7D7C1CF1FC118B300E0F5F0 /* MapView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -282,6 +288,14 @@
 				E79BD27B1FC0FBA0003A495D /* PlaceDetailsViewController.swift */,
 			);
 			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		E7D7C1D11FC119B200E0F5F0 /* LocationPreview */ = {
+			isa = PBXGroup;
+			children = (
+				E7D7C1D21FC119C600E0F5F0 /* LocationPreviewViewController.swift */,
+			);
+			path = LocationPreview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +445,7 @@
 				E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */,
 				E79BD24D1FC0B3CF003A495D /* UIViewExtension.swift in Sources */,
 				E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */,
+				E7D7C1D01FC118B300E0F5F0 /* MapView.swift in Sources */,
 				E79BD21D1FC04779003A495D /* MainViewController.swift in Sources */,
 				E79BD2631FC0CD7B003A495D /* SelectLocationViewController.swift in Sources */,
 				E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */,
@@ -444,6 +459,7 @@
 				E79BD21A1FC045FE003A495D /* SplashRouter.swift in Sources */,
 				E79BD2651FC0DC29003A495D /* Constants.swift in Sources */,
 				E79BD2771FC0E82F003A495D /* MapDelegate.swift in Sources */,
+				E7D7C1D31FC119C600E0F5F0 /* LocationPreviewViewController.swift in Sources */,
 				E79BD2491FC0AC33003A495D /* LocationService.swift in Sources */,
 				E79BD2801FC0FC1A003A495D /* View.swift in Sources */,
 				E79BD2601FC0CCC7003A495D /* Place.swift in Sources */,
