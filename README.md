@@ -13,3 +13,37 @@
 Звісно кожен користувач може додавати свої місця на мапі, котрі побачать інші.
 
 ## Екрани додатку
+
+1. Головний екран.
+
+![places nearby](https://i.imgur.com/N5pCgQp.png)
+
+2. Створення фіда.
+
+![create place](https://i.imgur.com/TU6r6hw.png)
+
+![select image](https://i.imgur.com/zc4XJLh.png)
+
+![image selected](https://i.imgur.com/OJk8mcg.png)
+
+![select location](https://i.imgur.com/Fw06aKH.png)
+
+![filled fields](https://i.imgur.com/tPyb8bQ.png)
+
+3. Список фідів.
+
+![rating list](https://i.imgur.com/Rq4TOld.png)
+
+4. Оцінювання фіда.
+
+![rate](https://i.imgur.com/8vDfy83.png)
+
+![rated](https://i.imgur.com/h8yt0x0.png)
+
+5. Перегляд фото.
+
+![image preview](https://i.imgur.com/wxW6NgW.jpg)
+
+6. Перегляд локації.
+
+![show locatoin](https://i.imgur.com/QOF1maM.png)
