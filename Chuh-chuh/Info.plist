@@ -27,14 +27,16 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>We need acces for your camera in order to attach photo to your place.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need acces for your camera in order to attach photo to your place.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need your location in order to show places nearby.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>We need your location in order to show places nearby.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>We need your location in order to show places nearby.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need acces for your camera in order to attach photo to your place.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location in order to show places nearby.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

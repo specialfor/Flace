@@ -24,7 +24,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         service.locationManager.delegate = service
         service.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         
-        service.locationManager.requestAlwaysAuthorization()
+        service.locationManager.requestWhenInUseAuthorization()
         service.locationManager.startUpdatingLocation()
         
         return service

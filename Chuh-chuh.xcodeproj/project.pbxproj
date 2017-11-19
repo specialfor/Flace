@@ -25,7 +25,6 @@
 		E79BD2521FC0B9ED003A495D /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2511FC0B9ED003A495D /* ImageSelector.swift */; };
 		E79BD2541FC0BAD3003A495D /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2531FC0BAD2003A495D /* PermissionManager.swift */; };
 		E79BD2561FC0BB52003A495D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD2551FC0BB51003A495D /* AlertManager.swift */; };
-		E79BD2581FC0CAFC003A495D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E79BD2571FC0CAFC003A495D /* GoogleService-Info.plist */; };
 		E79BD25B1FC0CBB6003A495D /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25A1FC0CBB6003A495D /* FirebaseService.swift */; };
 		E79BD25E1FC0CCA5003A495D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25D1FC0CCA5003A495D /* Location.swift */; };
 		E79BD2601FC0CCC7003A495D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79BD25F1FC0CCC7003A495D /* Place.swift */; };
@@ -77,7 +76,6 @@
 		E79BD2511FC0B9ED003A495D /* ImageSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 		E79BD2531FC0BAD2003A495D /* PermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		E79BD2551FC0BB51003A495D /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
-		E79BD2571FC0CAFC003A495D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E79BD25A1FC0CBB6003A495D /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		E79BD25D1FC0CCA5003A495D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E79BD25F1FC0CCC7003A495D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		E79BD2041FC04565003A495D /* Chuh-chuh */ = {
 			isa = PBXGroup;
 			children = (
-				E79BD2571FC0CAFC003A495D /* GoogleService-Info.plist */,
 				E79BD2251FC04903003A495D /* Services */,
 				E79BD21E1FC04804003A495D /* Library */,
 				E79BD2171FC045B6003A495D /* Modules */,
@@ -421,7 +418,6 @@
 			files = (
 				E79BD2101FC04565003A495D /* LaunchScreen.storyboard in Resources */,
 				E79BD20D1FC04565003A495D /* Assets.xcassets in Resources */,
-				E79BD2581FC0CAFC003A495D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,18 +465,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chuh-chuh/Pods-Chuh-chuh-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
