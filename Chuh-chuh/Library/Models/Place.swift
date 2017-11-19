@@ -17,6 +17,10 @@ class Place: Codable {
     var rating: Double
     var isRated: Bool
     
+    var normRating: Double {
+        return min(rating / 5, 5)
+    }
+    
     init(id: String, title: String, image: String, location: Location, rating: Double, isRated: Bool) {
         self.id = id
         self.title = title

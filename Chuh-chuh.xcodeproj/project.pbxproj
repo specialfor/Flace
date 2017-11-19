@@ -585,7 +585,7 @@
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Flace;
+				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
 				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -602,7 +602,7 @@
 				INFOPLIST_FILE = "Chuh-chuh/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ua.noblesteam.Flace;
+				PRODUCT_BUNDLE_IDENTIFIER = "ua.noblesteam.Chuh-chuh";
 				PRODUCT_NAME = Flace;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

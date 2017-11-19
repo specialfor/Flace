@@ -53,6 +53,11 @@ class MainViewController: ViewController, LocationServiceDelegate {
         addButton.addTarget(self, action: #selector(addTapped), for: .touchUpInside)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.reloadData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         LocationService.sharedInstance.delegate = self

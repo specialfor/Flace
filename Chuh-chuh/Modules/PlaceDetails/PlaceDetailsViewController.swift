@@ -61,7 +61,7 @@ class PlaceDetailsViewController: ViewController {
     
     // MARK: View lifecycle
     override func initialize() {
-        placeView.imageView.image = UIImage(fileUrl: URL(string: place.image)!)
+        placeView.imageView.image = UIImage(path: place.image)!
         
         placeView.titleField.isUserInteractionEnabled = false
         placeView.titleField.text = place.title
@@ -72,9 +72,9 @@ class PlaceDetailsViewController: ViewController {
         raterView.isHidden = false
         raterView.isUserInteractionEnabled = !place.isRated
         raterView.text = place.isRated ? "Common Rating" : ""
-
+        raterView.rating = place.normRating
+        
         if !place.isRated {
-            raterView.rating = min(place.rating / 10, 5)
             rateButton.addTarget(self, action: #selector(rateTapped), for: .touchUpInside)
         }
     }
@@ -88,7 +88,7 @@ class PlaceDetailsViewController: ViewController {
         place.rating += raterView.rating
         place.isRated = true
         
-        raterView.rating = min(place.rating / 5, 5)
+        raterView.rating = place.normRating
         
         let storageService = StorageService.default
 

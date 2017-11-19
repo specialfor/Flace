@@ -18,4 +18,12 @@ extension UIImage {
         self.init(data: imageData)
     }
     
+    convenience init?(directoryUrl: URL = Constants.documentoryDirectory, path: String) {
+        guard let imageData = try? Data(contentsOf: directoryUrl.appendingPathComponent(path)) else {
+            return nil
+        }
+        
+        self.init(data: imageData)
+    }
+    
 }

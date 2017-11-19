@@ -49,14 +49,6 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         
         return pin
     }
-
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        // TODO
-    }
-    
-    func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
-        // TODO: check
-    }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let annotation = view.annotation as? PlaceAnnotation else {
@@ -77,7 +69,7 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         
         let annotation = pin.annotation as! PlaceAnnotation
         
-        let image = UIImage(fileUrl: URL(string: annotation.place.image)!)
+        let image = UIImage(path: annotation.place.image)!
         let imageView = UIImageView(image: image)
         imageView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         imageView.layer.cornerRadius = 6.0
@@ -87,6 +79,8 @@ class MapDelegate: NSObject, MKMapViewDelegate {
         let raterView = RaterView()
         raterView.frame = CGRect(x: 0, y: 0, width: 80, height: 20)
         raterView.isUserInteractionEnabled = false
+        
+        raterView.rating = annotation.place.normRating
         
         pin.detailCalloutAccessoryView = raterView
     }

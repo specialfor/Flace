@@ -16,4 +16,11 @@ extension MKMapView {
         self.setRegion(region, animated: true)
     }
     
+    func reloadData() {
+        let ann = self.annotations(in: self.visibleMapRect)
+        let arrAnn = Array(ann) as! [MKAnnotation]
+        self.removeAnnotations(arrAnn)
+        self.addAnnotations(arrAnn)
+    }
+    
 }
