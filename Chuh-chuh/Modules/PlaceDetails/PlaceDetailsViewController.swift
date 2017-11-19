@@ -95,6 +95,7 @@ class PlaceDetailsViewController: ViewController {
             rateButton.addTarget(self, action: #selector(rateTapped), for: .touchUpInside)
         }
         
+        deleteButton.isHidden = true
         deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
     }
     
