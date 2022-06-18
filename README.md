@@ -18,34 +18,30 @@
 
 1. Головний екран.
 
-![places nearby](https://i.imgur.com/N5pCgQp.png)
+<img src="https://i.imgur.com/N5pCgQp.png" width=30%>
 
 2. Створення фіда.
 
-![create place](https://i.imgur.com/TU6r6hw.png)
-
-![select image](https://i.imgur.com/zc4XJLh.png)
-
-![image selected](https://i.imgur.com/OJk8mcg.png)
-
-![select location](https://i.imgur.com/Fw06aKH.png)
-
-![filled fields](https://i.imgur.com/tPyb8bQ.png)
+<img src="https://i.imgur.com/TU6r6hw.png" width=30%>
+<img src="https://i.imgur.com/zc4XJLh.png" width=30%>
+<img src="https://i.imgur.com/OJk8mcg.png" width=30%>
+<img src="https://i.imgur.com/Fw06aKH.png" width=30%>
+<img src="https://i.imgur.com/tPyb8bQ.png" width=30%>
 
 3. Список фідів.
 
-![rating list](https://i.imgur.com/Rq4TOld.png)
+<img src="https://i.imgur.com/Rq4TOld.png" width=30%>
 
 4. Оцінювання фіда.
 
-![rate](https://i.imgur.com/8vDfy83.png)
-
-![rated](https://i.imgur.com/h8yt0x0.png)
+<img src="https://i.imgur.com/8vDfy83.png" width=30%>
+<img src="https://i.imgur.com/h8yt0x0.png" width=30%>
 
 5. Перегляд фото.
 
-![image preview](https://i.imgur.com/wxW6NgW.jpg)
+<img src="https://i.imgur.com/wxW6NgW.jpg" width=30%>
+
 
 6. Перегляд локації.
 
-![show locatoin](https://i.imgur.com/QOF1maM.png)
+<img src="https://i.imgur.com/QOF1maM.png" width=30%>
